@@ -501,24 +501,22 @@ p{
     text-decoration: none;
     text-transform: uppercase;
     color:rgb(227, 218, 205);
-    /* left: 50px; */
-    padding: 10px;
-    font-size: 1.3rem;
-    letter-spacing: 1px;
+    padding-left: 20px;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
     
   }
   footer .col-6 p{
     justify-content: flex-end;
     text-align: right;
+    padding-right: 25px;
   }
   footer{
-    bottom: 0;
-    height: 100%;
-    width: 100%;
     background:rgb(102, 0, 102) ;
-    padding:40px 0;
+    padding:20px 0;
     color:rgb(227, 218, 205);
     font-weight: 300;
+    position: static;
    
   }
    
