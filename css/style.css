@@ -5,17 +5,22 @@ h1, h2, h4, h5, h6{
     
 }
 p{
-  font-weight: "Open Sans";
+  font-family: "Open Sans";
 }
 
 
-/* ---------------------------------------CORE STYLES -----------------------------------*/
+/* ----------------------------------------------------------------------------------CORE STYLES --------------------------------------------------------------------------------------*/
 :root {
     --primary-color: rgba(227, 218, 205, 0.1);
     --overlay-color: rgba(24, 39, 51 , 0.85);
     --menu-speed: 0.75s;
   }
-  
+  body{
+    background: var(--overlay-color);
+    overflow-x:hidden;
+    width:100vw;
+ 
+  }
   * {
     margin: 0;
     padding: 0;
@@ -45,27 +50,76 @@ p{
     justify-content: space-between;
 
   }
-  #section-1{
-    position: relative;
+  /*-------------------------------------------------------------------section-1----------------------------------------------------------------------------------------------------*/
+   #section-1 .showcase .row .col-12 p,
+  #section-1 .showcase .row .col-12 h1{
+    font-family: "Ballet";
+    font-weight: bold;
+    color: black;
+  } 
+  #section-1 .showcase .row .col-12 p{
+    line-height: 3rem;
+    font-size: 3rem;
+    padding-bottom: 20px;
   }
-  #section-1 .col-9{
-    margin-left:25%;
+  #section-1 .showcase .row .col-12 h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    padding-bottom: 20px;
   }
-  .absolute-svg{
-    position: absolute;
-    top: 40px;
-    left:-13%;
-    width:70%;
+  #section-1 span{
+    font-size: 3rem;
+    font-weight: bold;
+    color:gray;
+  }  
+ 
+  #section-1 img{
+    width: 50px;
+    height: 50px;
+    transform: rotate(270deg);
+  }
+  #section-1 .arrow-2{
+    width: 50px;
+    height: 50px;
+    transform: rotate(90deg);
+  }
+#section-1 #smile-1{
+  color: #660066;
+}
+ #section-1 #smile-1:hover{
+  width: 100px;
+  height: 50px;
+  position: relative;
+  animation: mymove 1s linear;
+  animation-duration: 5s;
+  transform-origin: center;
+  transform-box: fill-box;
+  
+  transition: 0.5s ease-in-out
+}
+
+@keyframes mymove {
+  from {
+    transform:rotateZ(0deg);
+  }
+  to {
+    transform:rotateZ(360deg);
+  }
+}
+  #section-1 .deco-p{
+    color: #660066;
+    font-family: 'Open Sans';
+    font-size: 1.5rem;
   }
  #section-1 .showcase {
     background: var(--primary-color);
     color:black;
     height: 100vh;
-    position: relative;
+    position: relative; 
   }
   #section-1 .showcase:before {
     content: '';
-    position: absolute;
+     position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
@@ -81,41 +135,7 @@ p{
     text-align: center;
     height: 100%;
   }
-  #Girl{ 
-    animation: mygirl 1s infinite linear;
-    animation-duration: 5s;
-    transform-origin: top left;
-    transform-box: fill-box;
-
-  }
-  @keyframes mygirl{
-    from {
-      transform:scaleZ(0);
-    }
-    to {
-      transform:scaleZ(50);
-    }
-  }
-
-  #section-1 .showcase .row .col-9 p,
-  #section-1 .showcase .row .col-9 h1{
-    font-family: "Ballet";
-  }
-  #section-1 .showcase .row .col-9 p{
-    font-size: 2rem;
-    padding-bottom: 20px;
-    font-weight: bold;
-    color: black;
-  }
-  #section-1 .showcase .row .col-9 h1{
-    font-size: 3.5rem;
-    padding-bottom: 20px;
-    font-weight: bold;
-    color: black;
-  }
   
-
- 
   /*---------------------------------------------------------------------------------------header----------------------------------------------------------------------------------*/
   header .col-3 a{
     height: 40px;
@@ -201,7 +221,7 @@ p{
     justify-content: center;
   }
   
-  /* ---------------------------------------------------Hamburger Line --------------------------------------------------*/
+  /* -----------------------------------------------------------------------------Hamburger Line --------------------------------------------------------------------------------------*/
   .menu-wrap .hamburger > div {
     position: relative;
     flex: none;
@@ -214,7 +234,7 @@ p{
     transition: all 0.4s ease;
   }
   
-  /* --------------------------------------Hamburger Lines - Top & Bottom ----------------------------------------------*/
+  /* ----------------------------------------------------------------------------Hamburger Lines - Top & Bottom -----------------------------------------------------------------------*/
   .menu-wrap .hamburger > div::before,
   .menu-wrap .hamburger > div::after {
     content: '';
@@ -226,29 +246,29 @@ p{
     background: inherit;
   }
   
-  /* -----------------------------------------------Moves Line Down----------------------------------------------------- */
+  /* ---------------------------------------------------------------------------------Moves Line Down-------------------------------------------------------------------------------- */
   .menu-wrap .hamburger > div::after {
     top: 10px;
   }
   
-  /* --------------------------------------------Toggler Animation ------------------------------------------------------*/
+  /* -------------------------------------------------------------------------------Toggler Animation ---------------------------------------------------------------------------------*/
   .menu-wrap .toggler:checked + .hamburger > div {
     transform: rotate(135deg);
   }
 
-  /* --------------------------------------------Turns Lines Into X---------------------------------------------------- */
+  /* ------------------------------------------------------------------------Turns Lines Into X--------------------------------------------------------------------------------------- */
   .menu-wrap .toggler:checked + .hamburger > div:before,
   .menu-wrap .toggler:checked + .hamburger > div:after {
     top: 0;
     transform: rotate(90deg);
   }
   
-  /*------------------------------------- Rotate On Hover When Checked --------------------------------------------------*/
+  /*---------------------------------------------------------------------- Rotate On Hover When Checked -------------------------------------------------------------------------------*/
   .menu-wrap .toggler:checked:hover + .hamburger > div {
     transform: rotate(225deg);
   }
   
-  /* ----------------------------------------------Show Menu------------------------------------------------------------- */
+  /* ------------------------------------------------------------------------------Show Menu------------------------------------------------------------------------------------------ */
   .menu-wrap .toggler:checked ~ .menu {
     visibility: visible;
   }
@@ -317,7 +337,7 @@ p{
     transition: color 0.4s ease;
   }
 
-  /*----------------------------------------------------------icons-----------------------------------------------------*/
+  /*---------------------------------------------------------------------------------------------icons---------------------------------------------------------------------------------*/
   .logo-wrapper p i{
     margin-bottom: 20px;
     font-size:5rem;
@@ -325,13 +345,13 @@ p{
 
   }
 
-/*-------------------------------------------------------about--------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------about-------------------------------------------------------------------------------------*/
   
 
 
 #section-2 {
   background: var(--primary-color);
-  height: 100vh;
+  min-height: 100vh;
   display:flex;
   flex-wrap:wrap;
   width:100%;
@@ -350,35 +370,42 @@ p{
   justify-content: center;
   align-items: center;
   padding: 30px;
-  margin-top: 80px;
+  padding-top: 120px;
   
 }
 
-.profile-content-wrapper h1 {
+.deco-p-p {
   color: #660066;
   margin-top: 80px;
   margin-bottom: 15px;
   font-size: 2.5rem;
   font-family: "Ballet";
   font-weight: bold;
+ 
 }
 .profile-content-wrapper p{
   font-size: 1.3rem;
   font-family: "Open Sans";
+  margin-right: 10px;
 }
  
-  /*-------------------------------------------------skils---------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------skils--------------------------------------------------------------------------------------------------*/
 
   .portfolio-items-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
-  }
+  } 
   
   .portfolio-item-wrapper {
     position: relative;
+    overflow: hidden;
    
   }
+  body{
+    overflow-x:hidden;
+    width:100vw;
+}
   
   .portfolio-img-background {
     background-size: cover;
@@ -420,15 +447,62 @@ p{
     width: 50%;
     margin-bottom: 20px;
   }
-  /*-------------------------------------------------contact------------------------------------------------------------*/
+  /*-----------------------------------------------------------------------------projects---------------------------------------------------------------------------------------------*/
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+#projets .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.slider img {
+  max-width: 100%;
+  display: none;
+}
+img.active {
+  display: block;
+  animation: fade 0.8s;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cont-btn {
+  width: 100%;
+  height: auto;
+  border: 1.5px solid #B38A4C;
+  ;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+}
+.btn-nav {
+  font-size: 50px;
+  margin: 0 15px;
+  cursor: pointer;
+ color: #660066;
+}
+  
+
+
+  /*--------------------------------------------------------------------------------contact--------------------------------------------------------------------------------------------*/
   
   #section-4{
     background: var(--primary-color);
     position: relative;
   }
   #section-4 .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+     display: grid;
+    grid-template-columns: 1fr 1fr; 
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -463,7 +537,7 @@ p{
   #section-4 i{
     color: #660066 ;
     font-size: 2.5rem;
-    display: blo;
+    
   }
 
   #section-4 .row .col-6  h1{
@@ -472,13 +546,16 @@ p{
     color: #660066;
     font-weight: bold;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
+  }
+  #section-4 .row .col-6 .arrow{
+    font-size: 5rem;
+    color: #660066;
   }
   #section-4  .row .col-6 a{
     text-decoration: none;
     font-size: 2rem;
     color: black;
-    padding: 8px;
   }
   #section-4  .row .col-6 a:hover{
     color: #660066;
@@ -491,8 +568,11 @@ p{
     font-family: "Open Sans";
     font-weight: bold;
   }
+  #section-4 .row .col-6  h1 .deux_point{
+    display: none;
+  }
 
-  /*-------------------------------------------------footer--------------------------------------------------------------*/
+  /*------------------------------------------------------------------------------footer-----------------------------------------------------------------------------------------------*/
   
   footer nav li{
     display: inline-block;
@@ -501,48 +581,66 @@ p{
     text-decoration: none;
     text-transform: uppercase;
     color:rgb(227, 218, 205);
-    padding-left: 20px;
-    font-size: 1rem;
-    letter-spacing: 0.8px;
+    /* left: 50px; */
+    padding: 10px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
     
   }
   footer .col-6 p{
     justify-content: flex-end;
     text-align: right;
-    padding-right: 25px;
   }
   footer{
+    bottom: 0;
+    height: 100%;
+    width: 100%;
     background:rgb(102, 0, 102) ;
-    padding:20px 0;
+    padding:40px 0;
     color:rgb(227, 218, 205);
     font-weight: 300;
-    position: static;
-   
   }
    
   
    
-  /* -----------------------------------------------Media query--------------------------------------------------------- */
+  /* ------------------------------------------------------------------------------------Media query---------------------------------------------------------------------------------- */
   
 
-  @media screen and (min-width: 0px) and (max-width: 1289px){
+   @media screen and (min-width: 0px) and (max-width: 1200px){
     .profile-content-wrapper{
       margin-top: 0;
     }
+  
+    #section-4 .row .col-6  h1{
+      font-size: 3rem;
+    }
+    #linkedin {
+      font-size: 1rem;
+    }
+    #section-4  .row .col-6 p{
+      font-size: 1.5rem;
+    } 
+    #section-4  .row .col-12 h1{
+      font-size: 4rem;
+    }
   }
 
-  @media screen and (min-width: 0px) and (max-width: 1200px) {
-    #illustrator { display: none; } ; 
-    #section-1 .offset-3{
-      display: none;
+  @media screen  and (max-width: 1100px){
+    #section-1  .showcase .row .col-12 p{
+      font-size:2.5rem;
+      padding: 5px;
     }
-    #section-1 .col-9{
-      margin-left: 0;
+    #section-1  h1{
+      font-size: 3rem !important;
+      padding: 5px;
+      font-weight: normal;
     }
-  }
-
-  @media screen and(min-width: 0px) and (max-width: 1050px){
-
+    #section-1 .deco-p{
+      font-size: 16px;
+    } 
+    #section-1 .showcase:before {
+       position: initial; 
+    }
     #section-2 {
       display:flex;
       flex-wrap:wrap;
@@ -550,35 +648,161 @@ p{
       width:100%;
       align-items:center;
       align-content:center;
+      padding-top: 150px;
     } 
    
     .profile-image-wrapper{
       display: flex;
       align-items:center;
       justify-content:center;
-      width: 50%;
+      width: 100% !important;
       
     }
     .profile-content-wrapper{
-      display: flex;
+      display: block;
       align-items:center;
       justify-content:center;
-      width: 100%;
+      width: 100% !important;
+     margin-left: 7px ;
+     margin-right: 7px;
     }
-  } 
-  @media (max-width: 600px) {
-    .footer-distributed .footer-left, .footer-distributed .footer-right {
-      text-align: center;
+ 
+    .profile-image-wrapper img {
+      width:80%;
+      margin-top: 95px;
     }
-    .footer-distributed .footer-right {
-      float: none;
-      margin: 0 auto 20px;
-    }
-    .footer-distributed .footer-left p.footer-links {
-      line-height: 1.8;
-    }
-  }
+   
+  }  
 
+    
+  
+  @media (max-width: 990px) {
+    #section-4 .row .col-6  h1{
+      font-size: 2.5rem;
+    }
+    #section-4  .row .col-6 a{
+      font-size: 1.5rem;
+    }
+    #section-4  .row .col-6 p{
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+    footer nav li a{
+      padding: 5px;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      
+    }
+
+  }
+  @media (max-width: 900px){
+    .portfolio-items-wrapper {
+      display: grid;
+      grid-template-columns: 1fr ;
+    } 
+    .portfolio-img-background {
+      width: 80%;
+      background-position: center;
+      margin:0px 0 10px 30px ;  
+    }
+    .img-text-wrapper{
+    justify-content: center !important;
+    align-items: center  !important;
+    text-align: center  !important;
+    height: 100%;
+    text-align: center;
+    padding-left: 220px; 
+  }
+    
+
+  }
+  @media (max-width: 770px){
+    #section-1 img{
+      display: none;
+    }
+    #section-1 .deco-p{
+      display: none;
+    }
+    #section-1 span{
+      display: none;
+    }
+    #section-1 .showcase .row .col-12 p{
+    font-family: "Abril Fatface";
+    font-weight: 400;
+    }
+    footer nav li a{
+      padding: 2px;
+      font-size: 1rem;
+      letter-spacing: 0px;
+      
+    }
+    footer .col-6 p{
+      display: block;
+    }
+    #section-4  .row .col-12 h1{
+      font-size: 2.8rem;
+    }
+    #section-4  .row .col-12 a{
+      font-size: 1.5rem;
+      padding: 8px;
+      border: 2px #660066 solid;
+      border-radius: 20px;
+    }
+    #section-4 i{
+      font-size: 1.5rem;
+    }
+    #section-4  .row .col-6 a{
+      font-size: 1.5rem;
+      color: black;
+      padding: 8px;
+    }
+
+  }
+  @media (max-width: 550px){
+    #section-4{
+      width:100%;
+    }
+    #section-4  .row .col-12 h1{
+      margin-top: 15px;
+      font-size: 1.8rem;
+    }
+    #section-4  .row .col-12 a{
+      font-size: 1.2rem;
+      margin-bottom: 0px;
+    }
+    #section-4  .row .col-12 a:hover{
+    border: 2px black solid;
+    }
+     #section-4 .row .col-6 .arrow{
+    display: none;
+    }
+    #section-4 .row .col-6 {
+      width:100%;
+    }
+    #section-4  .row .col-6 a{
+      font-size: 1.2rem;
+    }
+    #section-4 .row .col-6  h1{
+      font-size: 1.8rem;
+      margin-top: 30px;
+    }
+    /* #section-4 .row .col-6  h1 .deux_point{
+      display: ;
+    } */
+    footer nav li a{
+      padding: 2px;
+      font-size: 0.8rem;
+      letter-spacing: 0px;
+    }
+    footer{
+      padding:15px 0;
+      
+    }
+    footer .col-6 p{
+      font-size: 1rem;
+      margin-right: 7px;
+    }
+}
     
   
  
