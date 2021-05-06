@@ -381,7 +381,6 @@ p{
   font-size: 2.5rem;
   font-family: "Ballet";
   font-weight: bold;
- 
 }
 .profile-content-wrapper p{
   font-size: 1.3rem;
@@ -480,7 +479,6 @@ img.active {
   width: 100%;
   height: auto;
   border: 1.5px solid #B38A4C;
-  ;
   box-shadow: 0 10px 10px rgba(0,0,0,0.3);
   display: flex;
   justify-content: center;
@@ -492,7 +490,21 @@ img.active {
  color: #660066;
 }
   
+#projets .text-p{
+  font-size: 1.2rem;
+  color: #B38A4C;
+  font-family: 'Open Sans';
 
+}
+.deco-p-b {
+  color: #660066;
+  margin-top: 80px;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  font-family: "Ballet";
+  font-weight: bold;
+  padding-top: 15px;
+}
 
   /*--------------------------------------------------------------------------------contact--------------------------------------------------------------------------------------------*/
   
